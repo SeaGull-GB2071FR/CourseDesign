@@ -134,6 +134,7 @@ public class MainGUI extends JPanel {
     private static void createAndShowGUI() {
         JFrame frame = new JFrame("教材订购管理系统");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         MainGUI mainGUI = new MainGUI();
         frame.getContentPane().add(mainGUI);

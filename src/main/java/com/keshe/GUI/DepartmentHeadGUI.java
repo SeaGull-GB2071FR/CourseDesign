@@ -31,6 +31,8 @@ public class DepartmentHeadGUI extends User implements ActionListener {
         try {
             JFrame frame = new JFrame("DepartmentHead");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
             frame.setSize(1400, 400);
             JPanel panel = new JPanel();
             frame.add(panel);

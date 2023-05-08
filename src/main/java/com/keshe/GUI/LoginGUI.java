@@ -43,6 +43,7 @@ public class LoginGUI extends JPanel implements ActionListener {
         frame = new JFrame("Login System");
         frame.setSize(300, 200);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         panel = new JPanel();
         panel.setLayout(new GridLayout(3, 2));

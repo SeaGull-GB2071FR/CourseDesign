@@ -31,6 +31,8 @@ public class BookstoreGUI extends JPanel implements ActionListener {
 
         JFrame frame = new JFrame("Bookstore");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
         frame.setSize(1400, 400);
         JPanel panel = new JPanel();
         frame.add(panel);
