@@ -89,12 +89,10 @@ public class TextbookDepartmentGUI extends JPanel implements ActionListener {
             // 检查用户名和密码是否正确
             if (username.equals(user.getUsername()) && password.equals(user.getPassword())) {
                 JOptionPane.showMessageDialog(null, "Login success!" + " 您的身份为 " + user.getType());
-//                System.out.println("1, 按专业系查询订购表");
-//                System.out.println("2, 批量审核订购表");
                 if (s.equals("")) {
                     jTextArea.append("请输入功能 \n");
                     jTextArea.append("1, 按专业系查询订购表\n");
-                    jTextArea.append("2, 批量审核订购表\n");
+                    jTextArea.append("2, 审核订购表\n");
 
                 } else if (s.equals("1")) {
                     if (answerField.getText().equals(""))
@@ -107,7 +105,7 @@ public class TextbookDepartmentGUI extends JPanel implements ActionListener {
                             jTextArea.append("无该专业系" + answerField.getText());
                     }
                 } else if (s.equals("2")) {
-                    List<Integer> addId = new ArrayList<>();
+                    List<Integer> addId = new ArrayList();
                     if (answerField.getText().equals("")) {
                         sql = "select * from approval_opinions where is_approved = ?";
                         List<Approval_Opinions> opinions = queryRunner.query(connection, sql, new BeanListHandler<Approval_Opinions>(Approval_Opinions.class), 0);

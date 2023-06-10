@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class TextbookApproveListAdd {
     public List<Integer> Add() throws SQLException {
-        ArrayList<Integer> TextBookID = new ArrayList<>();
+        ArrayList<Integer> TextBookID = new ArrayList();
         Connection connection = GetConnUtil.getConnect();
         QueryRunner queryRunner = new QueryRunner();
         Scanner scanner = new Scanner(System.in);

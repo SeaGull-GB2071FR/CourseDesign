@@ -35,7 +35,7 @@ public class BookstoreService {
                     }
                     break;
                 case 2:
-                    List<OrderForm> orderFormsList = new ArrayList<>();
+                    List<OrderForm> orderFormsList = new ArrayList();
                     List<OrderForm> form = new OrderFormsListPut().ADD(orderFormsList);
 
                     bookstore.generatePurchaseOrder(form);

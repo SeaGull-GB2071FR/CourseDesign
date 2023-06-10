@@ -104,7 +104,7 @@ public class BookstoreGUI extends JPanel implements ActionListener {
                     }
 
                 } else if (chooseJTextField.getText().equals("2")) {
-                    List<OrderForm> orderFormsList = new ArrayList<>();
+                    List<OrderForm> orderFormsList = new ArrayList();
                     sql = "select * from order_forms order by publisher";
                     List<OrderForm> forms = queryRunner.query(connection, sql, new BeanListHandler<OrderForm>(OrderForm.class));
                     jTextArea.append("查询结果如下（订购单按出版社组织）\n");
